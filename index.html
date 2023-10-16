@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="./style.css" />
+        <title>Pelositos aleatorios</title>
+        <link type="image/png" sizes="16x16" rel="icon" href="./icons/icon-pestania.png">
+    </head>
+    <body>
+        <header>
+            <img class="iconApp" src="./icons/iconApp.png" alt="icon">
+            <h1>Pelosos App</h1>
+        </header>
+        
+
+        <span id="errorPelosos"></span>
+
+        <section id="randomPelosos">
+            <h2>Pelositos aleatorios</h2>
+            <div class="container">
+                <article>
+                    <img id="img1" alt="Foto de pelosito aleatorio" />
+                    <button id="btnGuardar1" onclick="saveFavourite()">
+                        <img id="iconMeGusta" src="./icons/me-gusta.png" alt="Guardar en favoritos">
+                    </button>
+                </article>
+            
+                <article>
+                    <img id="img2" alt="Foto de pelosito aleatorio" />
+                    <button id="btnGuardar2" onclick="saveFavourite()">
+                        <img id="iconMeGusta" src="./icons/me-gusta.png" alt="Guardar en favoritos">
+                    </button>
+                </article>
+            
+                <article>
+                    <img id="img3" alt="Foto de pelosito aleatorio" />
+                    <button id="btnGuardar3" onclick="saveFavourite()">
+                        <img id="iconMeGusta" src="./icons/me-gusta.png" alt="Guardar en favoritos">
+                    </button>
+                </article>
+
+                <article>
+                    <img id="img4" alt="Foto de pelosito aleatorio" />
+                    <button id="btnGuardar4" onclick="saveFavourite()">
+                        <img id="iconMeGusta" src="./icons/me-gusta.png" alt="Guardar en favoritos">
+                    </button>
+                </article>
+            </div>
+            
+            <button id="btnGenerar" onclick="loadRandomMichis()">Generar Peloso</button>
+        </section>
+        
+        <section id="uploadingPeloso">
+            <h2>Sube la foto de tu Michi</h2>
+
+            <form id="uploadingForm">
+                <input type="file" id="file" name="file">
+                <button id="btnSubir" type="button" onclick="uploadMichiPhoto()">Subir foto de michi</button>
+            </form>
+        </section>
+
+        <!-- seccion FAVORITOS -->
+        <section id="pelososFavoritos">
+        </section>
+
+        <div class="notificacion-1" id="notificacion">Pelosito guardado en favoritos</div>
+        <div class="notificacion-2" id="notificacionEliminado"></div>
+        <div class="notificacion-3" id="notificacionSubido">Pelosito subido a favoritos</div>
+        
+        <script src="./main.js"></script>
+    </body>
+</html>
